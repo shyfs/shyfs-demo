@@ -2221,9 +2221,9 @@
     picomatch "^2.2.2"
 
 "@shyfs/shyfs-js@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@shyfs/shyfs-js/-/shyfs-js-0.1.0.tgz#5baabfd633533639ac071804cc52a3ddc98ce70d"
-  integrity sha512-R9qjkJ5VXKO2FDOfXGivLTh5njOCeeg8MDLyAiGQHLbfiAHLmJiCMe4nb1A2oufGlkvXt1dC96bjbKKsaW3ROQ==
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@shyfs/shyfs-js/-/shyfs-js-0.1.2.tgz#e4724ba7e116cf92a6396a76c910c34662ed7829"
+  integrity sha512-ozo6BmPW0JTwFsH+3AKA4UTmirjCjN3OCrVCvJmkCWbJuXhQPz7NpHHdw5GXlfDkHiCb3dstIWZbZIWpd1Z9EA==
   dependencies:
     axios "^0.21.4"
     socket.io-client "^4.2.0"
@@ -10512,6 +10512,11 @@ react-focus-lock@2.5.0:
     react-clientside-effect "^1.2.2"
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
+
+react-icons@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
+  integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
 
 react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
