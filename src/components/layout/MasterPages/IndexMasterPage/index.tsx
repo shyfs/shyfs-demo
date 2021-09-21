@@ -1,11 +1,13 @@
 import { Img } from '@chakra-ui/image'
 import { Heading, SimpleGrid, Square } from '@chakra-ui/layout'
-import { BoxFile, Col, ContainerScreen, Row } from '@friendlyss/react'
+import { Col, ContainerScreen, Row } from '@friendlyss/react'
 import AppScroll from '../../../shared/Scrolls/AppScroll'
 import Logo from '../../../../assets/img/logo-transparent.png'
 import SquareButtonLg from '../../../shared/Buttons/SquareButtonLg'
-import { Button } from '@chakra-ui/button'
-import { shy } from '../../../../services/clients/shy'
+import FileItemRow from '../../../modules/FileItem/FileItemRow'
+import UploadLocal from '../../../modules/Uploads/UploadLocal'
+import UploadHttp from '../../../modules/Uploads/UploadHttp'
+import UploadTorrent from '../../../modules/Uploads/UploadTorrent'
 
 const IndexMasterPage: React.FC = () => {
   return (
@@ -41,34 +43,21 @@ const IndexMasterPage: React.FC = () => {
             </Row>
           </Col>
         </Col>
-        <Col mt={28}>
+        <Col mt={24} py={8}>
           <Col mx="auto" w={1100} maxW="100%" bg="blue.500" rounded="2xl" p={4}>
-            <Heading size="lg">Local Upload</Heading>
-            <Row my={4}>
-              <BoxFile
-                input={{
-                  onChange: (e) => {
-                    const [file] = Array.from(e.target.files || [])
-                    console.log(file)
-                    shy.uploads
-                      .local()
-                      .upload({
-                        file,
-                        from: 'local',
-                        path: '/VSFSDDD/folder2/fileName'
-                      })
-                      .then((res) => {
-                        console.log('response', res)
-                      })
-                  }
-                }}
-              >
-                <Button rounded="lg" bg="gray.800" size="lg" shadow="lg">
-                  Upload File
-                </Button>
-              </BoxFile>
-            </Row>
+            {/* <UploadLocal /> */}
+            {/* <UploadHttp /> */}
+            <UploadTorrent />
           </Col>
+        </Col>
+        <Col mx="auto" w={1100} maxW="100%" mb={4}>
+          <SimpleGrid gap={4}>
+            <FileItemRow />
+            <FileItemRow />
+            <FileItemRow />
+            <FileItemRow />
+            <FileItemRow />
+          </SimpleGrid>
         </Col>
       </AppScroll>
     </ContainerScreen>
